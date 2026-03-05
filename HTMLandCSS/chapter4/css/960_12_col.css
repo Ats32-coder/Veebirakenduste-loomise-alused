@@ -1,7 +1,6 @@
 /*
   960 Grid System ~ Core CSS.
   Learn more ~ http://960.gs/
-
   Licensed under GPL and MIT.
 */
 
@@ -9,7 +8,6 @@
   Forces backgrounds to span full width,
   even if there is horizontal scrolling.
   Increase this if your layout is wider.
-
   Note: IE6 works fine without this fix.
 */
 
@@ -17,7 +15,7 @@ body {
   min-width: 960px;
 }
 
-/* `Containers
+/* `Container
 ----------------------------------------------------------------------------------------------------*/
 
 .container_12 {
@@ -328,16 +326,21 @@ body {
 /* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
 
 .clearfix:before,
-.clearfix:after {
-  content: '\0020';
+.clearfix:after,
+.container_12:before,
+.container_12:after {
+  content: '.';
   display: block;
   overflow: hidden;
   visibility: hidden;
+  font-size: 0;
+  line-height: 0;
   width: 0;
   height: 0;
 }
 
-.clearfix:after {
+.clearfix:after,
+.container_12:after {
   clear: both;
 }
 
@@ -346,6 +349,7 @@ body {
   Move to separate stylesheet if invalid CSS is a problem.
 */
 
-.clearfix {
+.clearfix,
+.container_12 {
   zoom: 1;
 }
