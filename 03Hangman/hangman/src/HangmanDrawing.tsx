@@ -1,16 +1,16 @@
 const HEAD = (
-    <div
-        style={{
-            width: "50px",
-            height: "50px",
-            borderRadius: "100%",
-            backgroundColor: "10px solid black",
-            position: "absolute",
-            top: "50px",
-            right: "-30px"
-        }}
-    />
-    )
+  <div
+    style={{
+        width: "50px",
+        height: "50px",
+        borderRadius: "100%",
+        border: "10px solid black",
+        position: "absolute",
+        top: "50px",
+        right: "-30px",
+    }}
+  />
+)
 
 const BODY = (
     <div
@@ -84,8 +84,8 @@ const LEFT_LEG = (
         }}
     />
 )
-//tegemist on dünaamilise komponendiga, mis joonistab meest vastavalt
-//sellele, mitu valesti arvatud tähte on. Iga valesti arvatud täht lisab ühe kehaosa
+// tegemist on dünaamilise komponendiga, mis joonistab meest vastavalt 
+// sellele, mitu valesti arvatud tähte on. Iga valesti arvatud täht lisab ühe kehaosa. 
 
 const BODY_PARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG]
 
@@ -95,7 +95,7 @@ type HangmanDrawingProps = {
 
 export function HangmanDrawing({ numberOfGuesses }: HangmanDrawingProps) {
     return (
-        //alguses tuleb teha jalam koos postiga, mille külge kehaosad kinnituvad
+        //alguses tuleb teha jalam koos postiga, mille külge kehaosad kinnituvad.
         <div style={{ position: "relative" }}>
             {BODY_PARTS.slice(0, numberOfGuesses)}
             <div
@@ -133,5 +133,5 @@ export function HangmanDrawing({ numberOfGuesses }: HangmanDrawingProps) {
             />
             
         </div>
-    )
+    )          
 }
