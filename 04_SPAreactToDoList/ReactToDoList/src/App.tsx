@@ -43,7 +43,7 @@ const App: React.FC = () => {
 
 
   return (
-    <div className='App'>
+    <div className='app'>
       <h1>To-Do List</h1>
       {/* To-Do list UI goes here */}
       <div className='input-row'>
